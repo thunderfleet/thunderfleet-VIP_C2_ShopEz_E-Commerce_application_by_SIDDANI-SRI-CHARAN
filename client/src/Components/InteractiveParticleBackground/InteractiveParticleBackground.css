@@ -1,0 +1,18 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   InteractiveParticleBackground
+   Canvas sits fixed behind all content.
+   z-index: -5 → above animated shapes (-10) but below all page content.
+   pointer-events: none → clicks/hovers pass straight through.
+   ───────────────────────────────────────────────────────────────────────── */
+.ipb-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  pointer-events: none;
+  display: block;
+  /* Hardware-accelerate compositing layer */
+  will-change: transform;
+}
