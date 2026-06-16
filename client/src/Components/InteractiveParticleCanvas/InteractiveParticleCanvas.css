@@ -1,0 +1,28 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   InteractiveParticleCanvas
+   Layering (lowest → highest):
+     -20  ipc-canvas         ← particles (this file)
+     -10  animated-bg-container (gradient mesh + bubbles + shapes)
+      0+  page content
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.ipc-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* Behind the AnimatedBackground (-10) and all content */
+  z-index: -20;
+
+  /* Never steal clicks or hovers */
+  pointer-events: none;
+
+  /* Promote to its own GPU compositing layer */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  display: block;
+}
