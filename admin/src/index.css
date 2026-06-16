@@ -1,0 +1,49 @@
+:root {
+  /* Colors */
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --secondary: #1E293B;
+  --text-dark: #0F172A;
+  --text-light: #64748B;
+  --bg-light: #F8FAFC;
+  --bg-white: #FFFFFF;
+  --border: #E2E8F0;
+  --success: #10B981;
+  --danger: #EF4444;
+
+  /* Typography */
+  --font-main: 'Outfit', sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Radii */
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
